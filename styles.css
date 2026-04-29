@@ -183,7 +183,7 @@ p {
   display: grid;
   grid-template-columns: minmax(18rem, 0.72fr) minmax(22rem, 0.5fr);
   gap: 1rem;
-  align-items: end;
+  align-items: flex-end;
   overflow: hidden;
   padding: 7rem 1.2rem 1.2rem;
 }
@@ -321,7 +321,7 @@ p {
   gap: 0.55rem;
   min-height: 12rem;
   padding: 1rem;
-  align-content: end;
+  align-content: flex-end;
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
@@ -365,7 +365,7 @@ p {
   display: grid;
   gap: 0.8rem;
   padding: 1rem;
-  align-content: end;
+  align-content: flex-end;
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
@@ -397,7 +397,7 @@ p {
 .capability-band li {
   min-height: 5rem;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   padding: 0.8rem;
   color: rgba(248, 250, 245, 0.88);
   border-color: rgba(248, 250, 245, 0.18);
@@ -426,7 +426,7 @@ p {
 .feature-panel {
   min-height: 25rem;
   display: grid;
-  align-content: end;
+  align-content: flex-end;
   gap: 1.2rem;
   padding: 1.2rem;
   color: var(--white);
@@ -487,7 +487,7 @@ p {
 
 .workstation-copy {
   display: grid;
-  align-content: end;
+  align-content: flex-end;
   gap: 1rem;
   padding-bottom: 2rem;
 }
@@ -560,7 +560,7 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  align-items: end;
+  align-items: flex-end;
   padding: 1rem;
   border-bottom: 1px solid var(--hairline);
   background: rgba(255, 255, 255, 0.22);
@@ -614,7 +614,7 @@ p {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 1rem;
-  align-items: end;
+  align-items: flex-end;
   padding: 1rem;
   border: 1px solid var(--hairline);
   background: var(--glass);
@@ -706,7 +706,7 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  align-content: end;
+  align-content: flex-end;
   padding: 1rem;
   border: 1px solid var(--hairline);
   background: rgba(255, 255, 255, 0.26);
@@ -735,7 +735,7 @@ p {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.45fr);
   gap: 1rem;
-  align-items: end;
+  align-items: flex-end;
   border-top: 1px solid var(--hairline);
 }
 
@@ -795,7 +795,7 @@ main:not(.workstation) {
 .case-hero {
   min-height: 72svh;
   display: grid;
-  align-content: end;
+  align-content: flex-end;
   gap: 1rem;
   padding: 8rem 1.2rem 3rem;
 }
@@ -966,7 +966,7 @@ main:not(.workstation) {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.36fr);
   gap: 1rem;
-  align-items: end;
+  align-items: flex-end;
   padding: 8rem 1.2rem 1.2rem;
   background:
     linear-gradient(90deg, rgba(238, 240, 234, 0.96), rgba(238, 240, 234, 0.66)),
@@ -1197,7 +1197,7 @@ main:not(.workstation) {
 
 .cv-panel-head {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
 }

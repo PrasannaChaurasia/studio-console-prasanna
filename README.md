@@ -49,15 +49,43 @@ The local build links to these source documents:
 - `Prasanna Chaurasia_Aeon Flux_MCStudio_2025.pdf`
 - `Prasanna Chaurasia_CV.pdf`
 
-## Local Preview
+## Next.js Full Stack Preview
 
-Open the site directly in a browser:
+The portfolio has been migrated to a Vercel-primary Next.js app with a Neon-ready project CMS and contact lead capture.
 
-```text
-file:///C:/Users/chaupra/Documents/New%20project/index.html
+```bash
+npm install
+npm run dev
 ```
 
-No build step is required. The site is currently plain HTML, CSS, and JavaScript.
+Then open `http://localhost:3000`.
+
+## Environment
+
+Copy `.env.example` to `.env.local` and set:
+
+- `DATABASE_URL` - Neon Postgres connection string.
+- `ADMIN_PASSWORD` - password for `/admin`.
+- `ADMIN_SESSION_SECRET` - long random value for the admin session cookie.
+- `NEXT_PUBLIC_SITE_URL` - deployed or local site URL.
+
+Without `DATABASE_URL`, the public site uses seeded fallback project data and contact/admin writes return a configuration message.
+
+## Database
+
+Run the schema and seed against Neon:
+
+```bash
+npm run db:seed
+```
+
+This creates `projects` and `contact_leads`, then seeds the current portfolio projects.
+
+## Deployment
+
+- Vercel is the primary production host. Use the Vercel CLI or dashboard to link the GitHub repo and add the environment variables.
+- Netlify is configured through `netlify.toml` with the Next.js plugin as a secondary deployment target.
+- Legacy `.html` routes redirect to the new route structure.
 
 ## Next Development Goals
 

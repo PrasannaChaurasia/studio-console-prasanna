@@ -1,2 +1,9 @@
 pdf_strings.txt
 server.ps1
+.next/
+node_modules/
+.env
+.env*.local
+out/
+
+.vercel
