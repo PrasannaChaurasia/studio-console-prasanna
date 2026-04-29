@@ -1,0 +1,99 @@
+/* Reference-report framework layer: page rooms, evidence strips, and conversion sections. */
+.index-dashboard,
+.studio-method,
+.evidence-strip,
+.bim-console,
+.archive-controls,
+.page-cta {
+  padding: 5rem 1.2rem;
+}
+
+.index-dashboard,
+.studio-method,
+.evidence-strip,
+.bim-console,
+.archive-controls {
+  display: grid;
+  gap: 1rem;
+}
+
+.index-dashboard,
+.bim-console {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.studio-method,
+.evidence-strip,
+.archive-controls {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.index-dashboard div,
+.studio-method article,
+.evidence-strip div,
+.bim-console div,
+.archive-controls div {
+  min-height: 13rem;
+  display: grid;
+  gap: 0.7rem;
+  align-content: end;
+  padding: 1rem;
+  border: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.index-dashboard span,
+.studio-method span,
+.evidence-strip span,
+.bim-console span,
+.archive-controls span {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.index-dashboard strong,
+.evidence-strip strong,
+.bim-console strong,
+.archive-controls strong {
+  font-family: "Forum", serif;
+  font-size: 2.15rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.index-dashboard p,
+.studio-method p,
+.evidence-strip p,
+.bim-console p,
+.archive-controls p,
+.download-row em,
+.contact-note {
+  color: var(--muted);
+  font-style: normal;
+  line-height: 1.65;
+}
+
+.page-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+  border-top: 1px solid var(--hairline);
+}
+
+.page-cta h2 {
+  max-width: 14ch;
+}
+
+@media (max-width: 1100px) {
+  .index-dashboard,
+  .studio-method,
+  .evidence-strip,
+  .bim-console,
+  .archive-controls,
+  .page-cta {
+    grid-template-columns: 1fr;
+  }
+}
