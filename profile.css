@@ -1,0 +1,320 @@
+/* Page-specific CV dossier layout. Kept separate so the profile can evolve quickly. */
+.profile-page {
+  padding-top: 0;
+}
+
+.profile-hero {
+  min-height: 92svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.36fr);
+  gap: 1rem;
+  align-items: end;
+  padding: 8rem 1.2rem 1.2rem;
+  background:
+    linear-gradient(90deg, rgba(238, 240, 234, 0.96), rgba(238, 240, 234, 0.66)),
+    radial-gradient(circle at 82% 16%, rgba(47, 104, 102, 0.22), transparent 20rem),
+    linear-gradient(120deg, rgba(18, 22, 22, 0.08) 1px, transparent 1px);
+  background-size: auto, auto, 36px 36px;
+}
+
+.profile-hero-copy {
+  display: grid;
+  gap: 1rem;
+  max-width: 72rem;
+}
+
+.profile-hero-copy h1 {
+  max-width: 11ch;
+}
+
+.profile-title {
+  max-width: 58rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.profile-snapshot,
+.qr-panel,
+.profile-side-card {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+  border: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow);
+}
+
+.profile-snapshot span,
+.qr-panel span,
+.profile-side-card span,
+.profile-focus-grid span,
+.profile-role span,
+.education-timeline span {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.profile-snapshot strong {
+  font-family: "Forum", serif;
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.profile-snapshot p,
+.qr-panel p,
+.profile-side-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.profile-contact-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 1.2rem;
+  border: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.profile-contact-strip a {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 1rem;
+  border-right: 1px solid var(--hairline);
+}
+
+.profile-contact-strip a:last-child {
+  border-right: 0;
+}
+
+.profile-contact-strip span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.profile-contact-strip strong {
+  overflow-wrap: anywhere;
+  font-size: 0.92rem;
+}
+
+.profile-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.36fr);
+  gap: 1rem;
+  padding: 1.2rem;
+  align-items: start;
+}
+
+.profile-main,
+.profile-side {
+  display: grid;
+  gap: 1rem;
+}
+
+.profile-side {
+  position: sticky;
+  top: 5.8rem;
+}
+
+.profile-section {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.profile-section h2 {
+  max-width: 18ch;
+  font-size: 3.2rem;
+}
+
+.profile-section > p:not(.eyebrow) {
+  max-width: 58rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.profile-focus-grid,
+.tool-matrix {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.profile-focus-grid article,
+.tool-matrix article,
+.education-timeline article {
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.profile-focus-grid h3,
+.tool-matrix h3,
+.education-timeline h3,
+.profile-role h3 {
+  margin-top: 0.35rem;
+  font-size: 1.85rem;
+}
+
+.profile-focus-grid p,
+.tool-matrix p,
+.education-timeline p,
+.profile-role p,
+.experience-list p {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.profile-role {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.4fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding-top: 1rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.profile-role strong {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.experience-list p {
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.education-timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.cert-grid span {
+  display: block;
+  min-height: 4.2rem;
+  padding: 0.8rem;
+  border: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.22);
+  color: rgba(18, 22, 22, 0.78);
+  line-height: 1.45;
+}
+
+.cv-panel {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.32);
+  box-shadow: var(--shadow);
+}
+
+.cv-panel-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cv-frame {
+  position: relative;
+  min-height: 39rem;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  background: white;
+}
+
+.cv-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 1100px) {
+  .profile-hero,
+  .profile-shell,
+  .profile-contact-strip,
+  .profile-focus-grid,
+  .tool-matrix,
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-side {
+    position: static;
+  }
+
+  .profile-contact-strip a {
+    border-right: 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .profile-contact-strip a:last-child {
+    border-bottom: 0;
+  }
+
+  .profile-role,
+  .experience-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .profile-hero {
+    min-height: auto;
+    padding: 6rem 0.75rem 1rem;
+  }
+
+  .profile-contact-strip,
+  .profile-shell {
+    margin: 0 0.75rem;
+  }
+
+  .profile-shell {
+    padding: 0.75rem 0;
+  }
+
+  .profile-section h2 {
+    font-size: 2.35rem;
+  }
+
+  .cv-panel-head,
+  .profile-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cv-frame {
+    min-height: 31rem;
+  }
+}
