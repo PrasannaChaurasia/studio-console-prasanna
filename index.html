@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prasanna Chaurasia | Studio Console</title>
+  <meta
+    name="description"
+    content="Interactive architecture portfolio workstation for Prasanna Chaurasia: conceptual projects, BIM, real work, CV, and archive."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <div class="grain"></div>
+
+  <header class="site-header studio-topbar">
+    <a class="brand" href="index.html" aria-label="Go to homepage">
+      <span class="brand-stack">
+        <span>P</span>
+        <span>R</span>
+        <span>A</span>
+        <span>S</span>
+      </span>
+      <span class="brand-meta">
+        <strong>Prasanna Chaurasia</strong>
+        <em>Architecture . Conceptual Design . BIM</em>
+      </span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+      Menu
+    </button>
+
+    <nav class="site-nav" id="site-menu">
+      <a href="work.html">Work</a>
+      <a href="conceptuals.html">Conceptuals</a>
+      <a href="real-projects.html">Real Projects</a>
+      <a href="bim.html">BIM</a>
+      <a href="profile.html">Profile</a>
+      <a href="archive.html">Archive</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="workstation" id="top">
+    <section class="workstation-hero">
+      <div class="workstation-copy reveal">
+        <p class="eyebrow">Interactive Portfolio Workstation</p>
+        <h1>Prasanna Chaurasia</h1>
+        <p>
+          A calmer, more architectural interface for conceptual futures, real projects, BIM documentation,
+          and source portfolio PDFs. Select a project to update the live preview and project brief.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="work.html">Enter Work Index</a>
+          <a class="secondary-link" href="archive.html">Open Archive</a>
+        </div>
+      </div>
+
+      <section class="source-viewer reveal delay-1" aria-label="Selected portfolio preview">
+        <div class="viewer-toolbar">
+          <div>
+            <span id="viewer-kicker">Conceptual / 2025</span>
+            <h2 id="viewer-title">Aeon Flux</h2>
+          </div>
+          <a id="viewer-open" href="Prasanna%20Chaurasia_Aeon%20Flux_MCStudio_2025.pdf">Open PDF</a>
+        </div>
+        <div class="viewer-frame">
+          <iframe
+            id="source-preview"
+            title="Selected portfolio PDF preview"
+            src="Prasanna%20Chaurasia_Aeon%20Flux_MCStudio_2025.pdf#toolbar=0&navpanes=0"
+          ></iframe>
+          <div class="viewer-fallback">
+            <p>PDF preview depends on browser support. Use Open PDF if this panel does not render.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="control-deck reveal delay-2" aria-label="Portfolio controls">
+      <label class="command-search" for="project-search">
+        <span>Search portfolio</span>
+        <input id="project-search" type="search" placeholder="Search Aeon, BIM, urban, real projects..." autocomplete="off">
+      </label>
+      <div class="filter-row" aria-label="Project filters">
+        <button class="console-tab is-active" type="button" data-filter="all">All</button>
+        <button class="console-tab" type="button" data-filter="conceptual">Conceptual</button>
+        <button class="console-tab" type="button" data-filter="urban">Urban</button>
+        <button class="console-tab" type="button" data-filter="bim">BIM</button>
+        <button class="console-tab" type="button" data-filter="real">Real</button>
+      </div>
+    </section>
+
+    <section class="project-dock reveal delay-3" id="project-grid" aria-live="polite">
+      <article
+        class="dock-card is-selected"
+        tabindex="0"
+        data-type="conceptual"
+        data-tags="aeon flux conceptual cinematic future atmosphere visual"
+        data-title="Aeon Flux"
+        data-kicker="Conceptual / 2025"
+        data-copy="Lead cinematic case study for speculative architecture, world-building, visual atmosphere, and project storytelling."
+        data-link="aeon-flux.html"
+        data-pdf="Prasanna%20Chaurasia_Aeon%20Flux_MCStudio_2025.pdf"
+      >
+        <div class="dock-media media-aeon"></div>
+        <div class="dock-copy">
+          <span>01 / Conceptual</span>
+          <h2>Aeon Flux</h2>
+          <p>Speculative architecture, atmosphere, future worlds, and cinematic presentation.</p>
+        </div>
+      </article>
+
+      <article
+        class="dock-card"
+        tabindex="0"
+        data-type="urban conceptual"
+        data-tags="resilient nexus urban matrix systems future speculative"
+        data-title="The Resilient Nexus"
+        data-kicker="Urban Systems / 2025"
+        data-copy="Urban-scale speculative framework for resilience, networks, matrices, and adaptive future infrastructures."
+        data-link="resilient-nexus.html"
+        data-pdf="FuturlyxFiguraxUrbanMatrix-The%20Resilient%20Nexus-Prasanna-2025_compressed.pdf"
+      >
+        <div class="dock-media media-nexus"></div>
+        <div class="dock-copy">
+          <span>02 / Urban</span>
+          <h2>The Resilient Nexus</h2>
+          <p>Systems thinking, resilience narratives, urban futures, and layered diagrams.</p>
+        </div>
+      </article>
+
+      <article
+        class="dock-card"
+        tabindex="0"
+        data-type="bim"
+        data-tags="veridian elan bim revit documentation technical coordination"
+        data-title="Veridian Elan"
+        data-kicker="BIM / Documentation"
+        data-copy="Technical project source for Revit workflows, documentation discipline, coordination, and architectural delivery."
+        data-link="veridian-elan.html"
+        data-pdf="Veridian%20Elan%20-%20BIM%20Novatr%202025.pdf"
+      >
+        <div class="dock-media media-veridian"></div>
+        <div class="dock-copy">
+          <span>03 / BIM</span>
+          <h2>Veridian Elan</h2>
+          <p>Modeling, documentation, technical control, and BIM communication.</p>
+        </div>
+      </article>
+
+      <article
+        class="dock-card"
+        tabindex="0"
+        data-type="real"
+        data-tags="real professional built office implementation projects"
+        data-title="Real Projects Archive"
+        data-kicker="Professional Work"
+        data-copy="Office-facing and implementation-oriented archive for real project experience, roles, sheets, and buildable work."
+        data-link="real-projects.html"
+        data-pdf="Prasanna_Chaurasia_Real%20Projects.pdf"
+      >
+        <div class="dock-media media-real"></div>
+        <div class="dock-copy">
+          <span>04 / Real</span>
+          <h2>Real Projects Archive</h2>
+          <p>Professional work, practical details, role clarity, and project evidence.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="project-brief reveal-block" aria-label="Selected project brief">
+      <div>
+        <p class="eyebrow">Selected Brief</p>
+        <h2 id="inspector-title">Aeon Flux</h2>
+      </div>
+      <p id="inspector-copy">
+        Lead cinematic case study for speculative architecture, world-building, visual atmosphere, and project storytelling.
+      </p>
+      <a class="primary-link" id="project-open" href="aeon-flux.html">Open Case Study</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
