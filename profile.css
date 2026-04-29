@@ -52,6 +52,56 @@
   box-shadow: var(--shadow);
 }
 
+.profile-portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  min-height: 18rem;
+  display: grid;
+  place-items: end start;
+  overflow: hidden;
+  padding: 1rem;
+  border: 1px solid rgba(18, 22, 22, 0.18);
+  background:
+    radial-gradient(circle at 70% 20%, rgba(248, 250, 245, 0.82), transparent 7rem),
+    linear-gradient(135deg, rgba(47, 104, 102, 0.92), rgba(18, 22, 22, 0.92)),
+    linear-gradient(90deg, rgba(248, 250, 245, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(248, 250, 245, 0.12) 1px, transparent 1px);
+  background-size: auto, auto, 28px 28px, 28px 28px;
+}
+
+.profile-portrait::before,
+.profile-portrait::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(248, 250, 245, 0.34);
+  transform: rotate(-12deg);
+}
+
+.profile-portrait::before {
+  width: 72%;
+  height: 56%;
+  right: -12%;
+  top: 14%;
+  border-radius: 50%;
+}
+
+.profile-portrait::after {
+  width: 46%;
+  height: 34%;
+  left: 12%;
+  bottom: 18%;
+}
+
+.profile-portrait span {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  font-family: "Forum", serif;
+  font-size: 5.5rem;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
 .profile-snapshot span,
 .qr-panel span,
 .profile-side-card span,
